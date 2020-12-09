@@ -1,5 +1,7 @@
 import os
+import time
 import datetime
+import random
 import requests
 from bs4 import BeautifulSoup
 
@@ -50,13 +52,15 @@ def kenon_submit(session, idx):
 
 
 if __name__ == '__main__':
+    time.sleep(1 * random.randint(1, 59))
     with requests.Session() as ss:
         login(ss)
 
         kenon_id = getTodayId(ss)
 
-        #if not hasSubmitted(ss, kenon_id):
-        if True:
+        if kenon_id is not None and  hasSubmitted(ss, kenon_id):
             kenon_submit(ss, kenon_id)
-            print('Submitted.')
+            print(datetime.datetime.now(), 'submitted.')
+        else:
+            print('id is not found or has submitted.')
 
