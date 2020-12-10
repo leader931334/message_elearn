@@ -58,9 +58,10 @@ if __name__ == '__main__':
 
         kenon_id = getTodayId(ss)
 
-        if kenon_id is not None and  hasSubmitted(ss, kenon_id):
+        if kenon_id is not None and not hasSubmitted(ss, kenon_id):
             kenon_submit(ss, kenon_id)
             print(datetime.datetime.now(), 'submitted.')
         else:
+
             print(datetime.date.today(), 'id is not found or has submitted.')
 
