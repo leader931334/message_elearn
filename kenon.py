@@ -52,7 +52,7 @@ def kenon_submit(session, idx):
 
 
 if __name__ == '__main__':
-    time.sleep(1 * random.randint(1, 59))
+    time.sleep(60 * random.randint(0, 29))
     with requests.Session() as ss:
         login(ss)
 
