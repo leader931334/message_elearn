@@ -52,7 +52,7 @@ def kenon_submit(session, idx):
 
 
 if __name__ == '__main__':
-    time.sleep(60 * random.randint(0, 29))
+    time.sleep(0 * random.randint(0, 29))
     with requests.Session() as ss:
         login(ss)
 
@@ -62,5 +62,5 @@ if __name__ == '__main__':
             kenon_submit(ss, kenon_id)
             print(datetime.datetime.now(), 'submitted.')
         else:
-            print('id is not found or has submitted.')
+            print(datetime.date.today(), 'id is not found or has submitted.')
 
