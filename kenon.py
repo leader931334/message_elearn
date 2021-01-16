@@ -62,6 +62,5 @@ if __name__ == '__main__':
             kenon_submit(ss, kenon_id)
             print(datetime.datetime.now(), 'submitted.')
         else:
-
             print(datetime.date.today(), 'id is not found or has submitted.')
-
+            
