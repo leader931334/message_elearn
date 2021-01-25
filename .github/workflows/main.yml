@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.6'
       - run: pip install -r requirements.txt
-      - run: python kenon.py
+      #- run: python kenon.py
         env:
           USERNAME: ${{secrets.USERNAME}}
           PASSWORD: ${{secrets.PASSWORD}} 
